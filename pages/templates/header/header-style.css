@@ -23,16 +23,16 @@
 
 
 .header__info {
-    background-color: var(--blue);
+    background-color: var(--sky_blue);
     text-align: end;
     overflow: hidden;
 
 }
 
 .header__info p {
-    color: var(--withe);
+    color: var(--blue);
     font-weight: 500;
-    padding: 5px 20px 5px 20px;
+    padding: 0px 20px 0px 20px;
     white-space: nowrap;
     animation: moveText 15s linear infinite;
 
@@ -100,7 +100,7 @@ a {
 }
 
 .nav__link a {
-    color: var(--sky_blue);
+    color: var(--withe);
     position: relative;
 }
 
