@@ -198,6 +198,14 @@ a {
         display: block;
         width: 30px;
         height: 30px;
+        background-color: rgba(243, 243, 243, 0);
+        border: none;
+        cursor: pointer;
+        transition: 0.1s;
+    }
+    .navbar__toogle-btn:active
+    {
+        transform: scale(1.2);
     }
 
 }
