@@ -1,12 +1,24 @@
 
 
-function loadComponent(containerId, filePath, callback) {
+function loadComponentHeader(containerId, filePath, callback) {
     fetch(filePath)
         .then(response => response.text())
         .then(content => {
             document.getElementById(containerId).innerHTML = content;
 
             if (callback) callback();  // Llamar al callback después de cargar
+        })
+        .catch(error => {
+            console.error(`Error cargando ${filePath}:`, error);
+        });
+}
+
+
+function loadComponent(containerId, filePath) {
+    fetch(filePath)
+        .then(response => response.text())
+        .then(content => {
+            document.getElementById(containerId).innerHTML = content;
         })
         .catch(error => {
             console.error(`Error cargando ${filePath}:`, error);
@@ -22,7 +34,7 @@ let textoBanner;
 
 // Cargar el header y luego ejecutar el código que depende de él
 document.addEventListener('DOMContentLoaded', () => {
-    loadComponent('header', 'pages/templates/header/header.html', () => {
+    loadComponentHeader('header', 'pages/templates/header/header.html', () => {
         console.log("Header cargado, ahora sí podemos acceder a sus elementos");
 
         // Selecciona los elementos ya cargados
@@ -49,7 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
         textoBanner.textContent=datos[puntero]
 
 
+        
+
     });
+
+
+    //Carga de demas componentes
+    loadComponent('footer', 'pages/templates/footer/footer.html');
 });
 
 function mostrarMenu()
