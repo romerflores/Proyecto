@@ -12,9 +12,8 @@
 
 
 .footer {
-    position: sticky;
+    position: fixed;
     bottom: 0;
-    margin-top: 300px;
     
     width: 100%;
     display: flex;
@@ -100,9 +99,15 @@
 }
 
 
+
 .lista__item__link {
     text-decoration: none;
     color: var(--withe);
+}
+
+.lista__item__link:active
+{
+    background-color: #003049;
 }
 
 
