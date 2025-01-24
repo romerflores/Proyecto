@@ -1,1 +1,2 @@
-Proyecto simple con javascript puro, para mejorar mis conocimientos en este
+#Proyecto de una calculadora matematica
+hecho con javascrip Puro, desde cero
